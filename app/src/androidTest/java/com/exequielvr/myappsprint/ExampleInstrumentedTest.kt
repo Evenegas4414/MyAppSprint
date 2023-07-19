@@ -1,22 +1,57 @@
 package com.exequielvr.myappsprint
 
+import android.content.Context
+import androidx.room.Room
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
+import kotlinx.coroutines.runBlocking
+import org.hamcrest.CoreMatchers
+import org.hamcrest.MatcherAssert
+import org.junit.After
 import org.junit.Assert.*
+import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 
-/**
- * Instrumented test, which will execute on an Android device.
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
+
+    // referencias
+    private lateinit var daoTest : ItemsDao
+    private lateinit var db: ItemsDatabase
+
+
+
+
+    @Before
+    fun setUp(){
+        val context= ApplicationProvider.getApplicationContext<Context>()
+        db= Room.inMemoryDatabaseBuilder(context,ItemsDatabase::class.java).build()
+        daoTest= db.getItemsDao()
+
+    }
+
+
+
+    @After
+    fun shutDown(){
+        db.close()
+    }
     @Test
-    fun useAppContext() {
-        // Context of the app under test.
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.exequielvr.myappsprint", appContext.packageName)
+    fun insertCoursesList()= runBlocking {
+
+        val itemsEntity= listOf(
+
+            ItemsEntity(1, "Prueba1","test1","url","Cuatro",34),
+            ItemsEntity(2, "Prueba2","test2","url","Ocho", 12),
+
+            )
+        daoTest.insertAllItems(itemsEntity)
+        val itemLiveData = daoTest.getAllItems()
+        val itemList : List<ItemsEntity> = itemLiveData.value?: emptyList()
+
+
+        MatcherAssert.assertThat(itemList, CoreMatchers.not(emptyList()))
+        MatcherAssert.assertThat(itemList.size, CoreMatchers.equalTo(2))
     }
 }
