@@ -1,4 +1,4 @@
-package com.exequielvr.myappsprint
+package com.exequielvr.myappsprint.ui
 
 import android.content.Intent
 import android.net.Uri
@@ -13,6 +13,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.exequielvr.myappsprint.databinding.FragmentSecondBinding
+import com.exequielvr.myappsprint.viewmodel.ItemsViewModel
 
 
 class SecondFragment : Fragment() {

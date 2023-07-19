@@ -1,4 +1,4 @@
-package com.exequielvr.myappsprint
+package com.exequielvr.myappsprint.model
 
 
 fun fromInternetToItemsEntity(itemsList: List<Items>): List<ItemsEntity> {

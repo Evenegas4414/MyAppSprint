@@ -1,4 +1,4 @@
-package com.exequielvr.myappsprint
+package com.exequielvr.myappsprint.viewmodel
 
 
 import android.app.Application
@@ -6,6 +6,10 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.exequielvr.myappsprint.api.ItemsDatabase
+import com.exequielvr.myappsprint.model.ItemsDetailEntity
+import com.exequielvr.myappsprint.model.ItemsEntity
+import com.exequielvr.myappsprint.repository.ItemRepository
 import kotlinx.coroutines.launch
 
 class ItemsViewModel(application: Application) : AndroidViewModel(application) {

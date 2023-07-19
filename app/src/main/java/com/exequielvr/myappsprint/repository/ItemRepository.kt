@@ -1,6 +1,11 @@
-package com.exequielvr.myappsprint
+package com.exequielvr.myappsprint.repository
 
 import android.util.Log
+import com.exequielvr.myappsprint.model.ItemsDao
+import com.exequielvr.myappsprint.model.ItemsDetailEntity
+import com.exequielvr.myappsprint.api.RetrofitClient
+import com.exequielvr.myappsprint.model.fromInternetToItemDetailEntity
+import com.exequielvr.myappsprint.model.fromInternetToItemsEntity
 
 
 class ItemRepository (private val itemsDao: ItemsDao) {

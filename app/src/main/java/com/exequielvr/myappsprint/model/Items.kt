@@ -1,4 +1,4 @@
-package com.exequielvr.myappsprint
+package com.exequielvr.myappsprint.model
 
 data class Items(
 

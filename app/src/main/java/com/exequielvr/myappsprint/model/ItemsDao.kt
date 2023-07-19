@@ -1,4 +1,4 @@
-package com.exequielvr.myappsprint
+package com.exequielvr.myappsprint.model
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

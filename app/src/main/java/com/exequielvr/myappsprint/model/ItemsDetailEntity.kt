@@ -1,4 +1,4 @@
-package com.exequielvr.myappsprint
+package com.exequielvr.myappsprint.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

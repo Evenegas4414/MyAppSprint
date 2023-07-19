@@ -1,9 +1,12 @@
-package com.exequielvr.myappsprint
+package com.exequielvr.myappsprint.api
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.exequielvr.myappsprint.model.ItemsDetailEntity
+import com.exequielvr.myappsprint.model.ItemsEntity
+import com.exequielvr.myappsprint.model.ItemsDao
 
 @Database(
     entities = [ItemsEntity::class, ItemsDetailEntity::class], version = 1,

@@ -1,4 +1,4 @@
-package com.exequielvr.myappsprint
+package com.exequielvr.myappsprint.ui
 
 import com.exequielvr.myappsprint.databinding.FragmentFirstBinding
 import android.os.Bundle
@@ -11,6 +11,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.exequielvr.myappsprint.adapter.ItemsAdapter
+import com.exequielvr.myappsprint.viewmodel.ItemsViewModel
+import com.exequielvr.myappsprint.R
 
 class FirstFragment : Fragment() {
 

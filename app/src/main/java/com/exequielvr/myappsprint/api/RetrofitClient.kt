@@ -1,4 +1,4 @@
-package com.exequielvr.myappsprint
+package com.exequielvr.myappsprint.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
