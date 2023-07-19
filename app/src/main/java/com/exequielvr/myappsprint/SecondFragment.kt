@@ -48,16 +48,13 @@ class SecondFragment : Fragment() {
         mViewModel.getItemDetail().observe(viewLifecycleOwner, Observer {
             Log.d("Item id:", itemId.toString())
             var id = it.id
-            var name = it.title
+            var name = it.nombre
 
-            Glide.with(mBinding.ivLogo).load(it.image).into(mBinding.ivLogo)
-            mBinding.tvTitle.text = it.title
-            mBinding.tvDescription.text = it.previewDescription
-            mBinding.tvMinimumSkill.text = "Conocimiento mínimo: ${it.minimumSkill}"
-            mBinding.tvModality.text = "Modalidad: ${it.modality}"
-            mBinding.tvTuition.text = "Valor del curso: ${it.tuition}"
-            mBinding.tvDuration.text = "Duracion del curso ${it.weeks} semanas"
-            mBinding.tvStart.text = "Inicio de clases: ${it.star}"
+            Glide.with(mBinding.ivLogo).load(it.imagenLink).into(mBinding.ivLogo)
+            mBinding.tvnombre.text = it.nombre
+            mBinding.tvmarca.text = it.marca
+            mBinding.tventrega.text = if (it.entrega) "Cuenta con despacho" else "Sin despacho"
+            mBinding.tvprecio.text = "$" + it.precio.toString()
 
             mBinding.btMail.setOnClickListener {
                 val emailIntent = Intent(Intent.ACTION_SEND)

@@ -7,9 +7,9 @@ import retrofit2.http.Path
 
 interface AppApi {
 
-    @GET("courses")
+    @GET("shoes")
     suspend fun fecthItemsList(): Response<List<Items>>
 
-    @GET("courses/{id}")
+    @GET("shoes/{id}")
     suspend fun fechItemDetail(@Path("id") id: String): Response<ItemDetail>
 }

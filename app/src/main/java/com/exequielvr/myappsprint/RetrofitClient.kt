@@ -7,7 +7,7 @@ class RetrofitClient {
 
 
     companion object {
-        private const val BASE_URL = "https://caso-invest-center-mariocanedo.vercel.app/"
+        private const val BASE_URL = "https://prueba-mariocanedo.vercel.app/"
 
         lateinit var retrofitInstance: Retrofit
         fun retrofitInstance(): AppApi {

@@ -44,7 +44,7 @@ class FirstFragment : Fragment() {
                 Log.d("Seleccion", it.id.toString())
             }
             val bundle = Bundle().apply {
-                putString("itemId", it.id)
+                putInt("itemId", it.id)
             }
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, bundle)
         })

@@ -33,21 +33,19 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvdescription"
+                android:id="@+id/tvmarca"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/tvduration"
+                android:id="@+id/tventrega"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/tvstart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
+
+

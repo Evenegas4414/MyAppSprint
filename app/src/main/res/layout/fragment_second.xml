@@ -17,7 +17,7 @@
         tools:src="@drawable/ic_launcher_foreground" />
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvnombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
     <TextView
-        android:id="@+id/tvDescription"
+        android:id="@+id/tvmarca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -39,10 +39,10 @@
         android:text="@string/test_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvnombre" />
 
     <TextView
-        android:id="@+id/tvMinimumSkill"
+        android:id="@+id/tventrega"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -52,35 +52,12 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/tvmarca" />
+
+
 
     <TextView
-        android:id="@+id/tvModality"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/test_text"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMinimumSkill" />
-
-    <TextView
-        android:id="@+id/tvTuition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/test_text"
-        android:textColor="#E64A19"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvModality" />
-
-    <TextView
-        android:id="@+id/tvDuration"
+        android:id="@+id/tvprecio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -90,20 +67,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTuition" />
-
-    <TextView
-        android:id="@+id/tvStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/test_text"
-        android:textColor="#212121"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDuration" />
+        app:layout_constraintTop_toBottomOf="@+id/tventrega" />
 
     <Button
         android:id="@+id/btMail"
@@ -113,6 +77,6 @@
         android:text="@string/send_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvStart" />
+        app:layout_constraintTop_toBottomOf="@+id/tventrega" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

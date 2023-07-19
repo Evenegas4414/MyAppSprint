@@ -29,12 +29,10 @@ class ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ItemVH>() {
         RecyclerView.ViewHolder(mBinding.root), View.OnClickListener {
 
         //////// MODIFICAR
-        fun bind(course: ItemsEntity) {
-            Glide.with(mBinding.ivLogo).load(course.image).centerCrop().into(mBinding.ivLogo)
-            mBinding.tvname.text = course.title
-            mBinding.tvdescription.text = course.previewDescription
-            mBinding.tvduration.text = "duración: " + course.weeks.toString() + " Semanas"
-            mBinding.tvstart.text = "Inicio: " + course.star
+        fun bind(item: ItemsEntity) {
+            Glide.with(mBinding.ivLogo).load(item.imagenLink).centerCrop().into(mBinding.ivLogo)
+            mBinding.tvname.text = item.nombre
+            mBinding.tvmarca.text = item.marca
             itemView.setOnClickListener(this)
 
         }

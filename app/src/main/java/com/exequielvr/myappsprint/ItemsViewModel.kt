@@ -12,7 +12,6 @@ class ItemsViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: ItemRepository
     private val itemDetailLiveData = MutableLiveData<ItemsDetailEntity>()
-    private var idSelected: String = "-1"
 
     init {
         val bd = ItemsDatabase.getDataBase(application)

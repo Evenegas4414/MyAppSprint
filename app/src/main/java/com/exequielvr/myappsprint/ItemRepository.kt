@@ -1,14 +1,12 @@
 package com.exequielvr.myappsprint
 
 import android.util.Log
-import androidx.lifecycle.MutableLiveData
 
 
 class ItemRepository (private val itemsDao: ItemsDao) {
 
     private val networkService = RetrofitClient.retrofitInstance()
     val itemsListLiveData = itemsDao.getAllItems()
-    val itemDetailLiveData = MutableLiveData<ItemsDetailEntity>()
 
     suspend fun  fechItems(){
         val service = kotlin.runCatching { networkService.fecthItemsList()}

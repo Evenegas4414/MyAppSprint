@@ -19,11 +19,7 @@ interface ItemsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertItemDetail(item: ItemsDetailEntity)
 
-
-    // da error por momentanemante no se ocupa
     @Query("SELECT * FROM items_details_table  WHERE id=:id")
     fun  getItemDetailByID(id:String): LiveData<ItemsDetailEntity?>
-
-
 
 }

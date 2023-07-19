@@ -15,19 +15,17 @@ fun fromInternetToItemsEntity(itemsList: List<Items>): List<ItemsEntity> {
     }
 }
 
-fun fromInternetToItemDetailEntity(course: ItemDetail): ItemsDetailEntity {
+fun fromInternetToItemDetailEntity(item: ItemDetail): ItemsDetailEntity {
 
     return ItemsDetailEntity(
-        id = course.id,
-        title = course.title,
-        previewDescription = course.previewDescription,
-        image = course.image,
-        weeks = course.weeks,
-        tuition = course.tuition,
-        minimumSkill = course.minimumSkill,
-        scholarshipAvailable = true,
-        modality = course.modality,
-        star = course.start
+        id = item.id,
+        nombre = item.nombre,
+        origen = item.origen,
+        imagenLink = item.imagenLink,
+        marca = item.marca,
+        numero = item.numero,
+        precio = item.precio,
+        entrega = item.entrega
     )
 }
 
